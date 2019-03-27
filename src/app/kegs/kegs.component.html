@@ -1,0 +1,40 @@
+<div class = "container">
+  <h2>The Wooden Keg</h2>
+  <ul class="keg">
+    <li *ngFor="let keg of kegs"
+      [class.selected]="keg === selectedKeg"
+      (click)="onSelect(keg)">
+      <span class="badge">{{keg.name}}</span>
+      <button (click)="removeKeg(keg)">Delete</button>
+    </li>
+  </ul>
+
+  <div *ngIf="selectedKeg">
+
+    <h2>{{selectedKeg.name}} Details</h2>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedKeg.name" placeholder="name"/>
+      </label>
+    </div>
+    <div>
+      <label>brand:
+        <input [(ngModel)]="selectedKeg.brand" placeholder="brand"/>
+      </label>
+    </div>
+    <div>
+      <label>price:
+        <input [(ngModel)]="selectedKeg.price" placeholder="price"/>
+      </label>
+    </div>
+    <div>
+      <label>alcohol content:
+        <input [(ngModel)]="selectedKeg.alcoholContent" placeholder="alcohol content"/>
+      </label>
+    </div>
+    <div>
+      <label>how full:
+        <input [(ngModel)]="selectedKeg.fullness" placeholder="fullness"/>
+      </label>
+    </div>
+  </div>
