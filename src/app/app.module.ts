@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { KegsComponent } from './kegs/kegs.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { NewBeerComponent } from './new-beer/new-beer.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    KegsComponent
+    KegsComponent,
+    NavBarComponent,
+    NewBeerComponent
   ],
   imports: [
     BrowserModule,
